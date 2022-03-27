@@ -163,6 +163,7 @@ p {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .nav-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -172,8 +173,26 @@ p {
   color: var(--accent-color);
 }
 
+.nav-item.active {
+  position: relative;
+}
+
 .active .link {
+  position: relative;
   color: var(--accent-color);
+}
+
+.active .link::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -25.6px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* contacts */
