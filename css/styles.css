@@ -320,6 +320,26 @@ p {
   margin-right: 30px;
 }
 
+.job-thumb {
+  position: relative;
+}
+
+.job-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 27px 0;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--basic-white);
+}
+
 /* наша команда */
 
 .team {
@@ -573,7 +593,7 @@ p {
 }
 
 /* portfolio cards */
-.cards {
+.cards-list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -581,12 +601,6 @@ p {
 .cards-item {
   width: calc((100% - 60px) / 3);
   border-bottom: 1px solid #eeeeee;
-}
-
-.cards-item:hover,
-.cards-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-item:not(:nth-child(3n)) {
@@ -598,6 +612,55 @@ p {
 
 .cards-link {
   display: block;
+}
+
+.cards-link:hover,
+.cards-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.cards-link:hover .overlay,
+.cards-link:focus .overlay {
+  opacity: 1;
+}
+
+.cards-link:hover .cards-box::before,
+.cards-link:focus .cards-box::before {
+  opacity: 1;
+}
+
+.cards-box {
+  position: relative;
+}
+
+.cards-box::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 64px 24px;
+
+  font-size: 18px;
+  line-height: 1.55;
+
+  color: var(--basic-white);
+  opacity: 0;
 }
 
 .cards-thumb {
