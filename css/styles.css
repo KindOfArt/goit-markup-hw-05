@@ -756,6 +756,11 @@ p {
   background-color: transparent;
 }
 
+.btn-modal-close:hover,
+.btn-modal-close:active {
+  fill: var(--accent-color);
+}
+
 .is-hidden {
   opacity: 0;
   pointer-events: none;
