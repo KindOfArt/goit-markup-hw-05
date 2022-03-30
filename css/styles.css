@@ -446,8 +446,11 @@ p {
 }
 
 .social-icons {
-  fill: var(--icons-unactive);
   display: block;
+
+  transition: fill 250ms var(--transform-timing);
+
+  fill: var(--icons-unactive);
 }
 
 .team-social-link:hover .social-icons,
@@ -687,7 +690,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  widows: 100%;
+  width: 100%;
   height: 100%;
   transform: translateY(100%);
   padding: 63px 24px;
